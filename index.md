@@ -1,37 +1,52 @@
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/neurogeriatricskiel/data/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Dataset Overview
+The general folder structure for any dataset is depicted below:
+
+```markdown
+.
+├── sourcedata/
+├── rawdata/
+│   ├── sub-<label>
+│   ├── sub-<label>
+│   ├── ...
+│   ├── sub-<label>
+│   ├── dataset_description.json
+│   ├── participants.tsv
+│   ├── participants.json
+│   └── ...
+└── ...
+```
+
+- `sourcedata`: data files directly from the sensor system
+- `rawdata`: data files converted to BIDS data format
+  - `sub-<label>`: for each subject a separate folder
+  - `dataset_description.json`: describing the dataset
+  - `participants.tsv`: demographics data of the study participants
+  - `participants.json`: explaining each variable from the demographics data
+
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### Subject-specific Folders
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+Then, for each subject, the data are organized in a folder `sub-<label>`, with data from different recording modalities, *e.g.* EEG, IMU, etc., organized in a separate folder:
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+.
+├── sub-<label>/
+├── eeg/
+├── motion/
+├── ...
+└── sub-<label>_scans.tsv
 ```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/neurogeriatricskiel/data/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Within each modality-specific folder, the data files are organized as follows:
+```markdown
+.
+├── sub-<label>/
+├── eeg/
+├── motion/
+│   ├── sub-<label>_task-<label>_tracksys-<label>_channels.tsv
+│   ├── sub-<label>_task-<label>_tracksys-<label>_motion.tsv
+└── ...
+```
+The data are stored in text-based format, and are `TAB` delimited. In this way, data can be read into MATLAB, Python, or even Excel.
