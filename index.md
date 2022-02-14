@@ -25,17 +25,14 @@ The general folder structure for any dataset is depicted below:
   - `participants.tsv`: demographics data of the study participants
   - `participants.json`: explaining each variable from the demographics data
 
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
 ### Subject-specific Folders
 
 Then, for each subject, the data are organized in a folder `sub-<label>`, with data from different recording modalities, *e.g.* EEG, IMU, etc., organized in a separate folder:
 ```markdown
 .
 ├── sub-<label>/
-├── eeg/
-├── motion/
+│   ├── eeg/
+│   ├── motion/
 ├── ...
 └── sub-<label>_scans.tsv
 ```
