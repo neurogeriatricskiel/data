@@ -1,6 +1,6 @@
-## Welcome to GitHub Pages
+# AG Neurogeriatrie BIDS Data
 
-### Dataset Overview
+## Folder Structure
 The general folder structure for any dataset is depicted below:
 
 ```markdown
@@ -17,7 +17,7 @@ The general folder structure for any dataset is depicted below:
 │   └── ...
 └── ...
 ```
-
+where:
 - `sourcedata`: data files directly from the sensor system
 - `rawdata`: data files converted to BIDS data format
   - `sub-<label>`: for each subject a separate folder
@@ -26,24 +26,29 @@ The general folder structure for any dataset is depicted below:
   - `participants.json`: explaining each variable from the demographics data
 
 ### Subject-specific Folders
-
 Then, for each subject, the data are organized in a folder `sub-<label>`, with data from different recording modalities, *e.g.* EEG, IMU, etc., organized in a separate folder:
 ```markdown
 .
-├── sub-<label>/
-│   ├── eeg/
-│   ├── motion/
-├── ...
-└── sub-<label>_scans.tsv
+├── sourcedata/
+├── rawdata/
+    ├── sub-<label>
+        ├── eeg/
+        ├── motion/
+        ├── ...
+        └── sub-<label>_scans.tsv
 ```
 Within each modality-specific folder, the data files are organized as follows:
 ```markdown
 .
-├── sub-<label>/
-├── eeg/
-├── motion/
-│   ├── sub-<label>_task-<label>_tracksys-<label>_channels.tsv
-│   ├── sub-<label>_task-<label>_tracksys-<label>_motion.tsv
-└── ...
+├── sourcedata/
+├── rawdata/
+    ├── sub-<label>
+        ├── eeg/
+        ├── motion/
+            ├── sub-<label>_task-<label>_tracksys-<label>_channels.tsv
+            ├── sub-<label>_task-<label>_tracksys-<label>_motion.tsv
+            └── ...
+        ├── ...
+        └── sub-<label>_scans.tsv
 ```
 The data are stored in text-based format, and are `TAB` delimited. In this way, data can be read into MATLAB, Python, or even Excel.
