@@ -1,4 +1,6 @@
-## Welcome to GitHub Pages
+# Minimal data standards
+## Motivation
+This page is intended as a blueprint for the data organization of all sensor-based projects of the [AG Neurogeriatrics](https://neurogeriatrics-kiel.com/de/). It should help to streamline analysis pipelines and keep projects organized for research partners.
 
 ### Dataset Overview
 The general folder structure for any dataset is depicted below:
@@ -12,8 +14,8 @@ The general folder structure for any dataset is depicted below:
 │   ├── ...
 │   ├── sub-<label>
 │   ├── dataset_description.json
-│   ├── participants.tsv
-│   ├── participants.json
+│   ├── participants_overview.tsv
+│   ├── participants_overview.json
 │   └── ...
 └── ...
 ```
@@ -22,8 +24,8 @@ The general folder structure for any dataset is depicted below:
 - `rawdata`: data files converted to BIDS data format
   - `sub-<label>`: for each subject a separate folder
   - `dataset_description.json`: describing the dataset
-  - `participants.tsv`: demographics data of the study participants
-  - `participants.json`: explaining each variable from the demographics data
+  - `participants_overview.tsv`: demographics data of the study participants
+  - `participants_overview.json`: explaining each variable from the demographics data
 
 ### Subject-specific Folders
 
@@ -33,8 +35,9 @@ Then, for each subject, the data are organized in a folder `sub-<label>`, with d
 ├── sub-<label>/
 │   ├── eeg/
 │   ├── motion/
-├── ...
-└── sub-<label>_scans.tsv
+|   └── sub-<label>_scans.tsv
+└── ...
+
 ```
 Within each modality-specific folder, the data files are organized as follows:
 ```markdown
@@ -46,4 +49,7 @@ Within each modality-specific folder, the data files are organized as follows:
 │   ├── sub-<label>_task-<label>_tracksys-<label>_motion.tsv
 └── ...
 ```
-The data are stored in text-based format, and are `TAB` delimited. In this way, data can be read into MATLAB, Python, or even Excel.
+The data are stored in text-based format, and are `TAB` delimited. In this way, data can be read into MATLAB, Python, or even Excel. However, if the files become too large, the user can change the file format *e.g.* .npy, but keeping the same tabular structure.
+
+## About
+This page is maintained by [Robbin Johannes Romijnders](mailto:r.romijnders@neurologie.uni-kiel.de) in collaboration with Walter Maetzler and Clint Hansen.
