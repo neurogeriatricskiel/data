@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 # Minimal data standards
 ## Motivation
 This page is intended as a blueprint for the data organization of all sensor-based projects of the [AG Neurogeriatrics](https://neurogeriatrics-kiel.com/de/). It should help to streamline analysis pipelines and keep projects organized for research partners.
-=======
-# AG Neurogeriatrie BIDS Data
->>>>>>> 8c32fc58fcdd653182e217cd1a86eca0e50842de
 
 ## Folder Structure
 The general folder structure for any dataset is depicted below:
@@ -35,14 +31,6 @@ where:
 Then, for each subject, the data are organized in a folder `sub-<label>`, with data from different recording modalities, *e.g.* EEG, IMU, etc., organized in a separate folder:
 ```markdown
 .
-<<<<<<< HEAD
-├── sub-<label>/
-│   ├── eeg/
-│   ├── motion/
-|   └── sub-<label>_scans.tsv
-└── ...
-
-=======
 ├── sourcedata/
 ├── rawdata/
     ├── sub-<label>
@@ -50,7 +38,6 @@ Then, for each subject, the data are organized in a folder `sub-<label>`, with d
         ├── motion/
         ├── ...
         └── sub-<label>_scans.tsv
->>>>>>> 8c32fc58fcdd653182e217cd1a86eca0e50842de
 ```
 Within each modality-specific folder, the data files are organized as follows:
 ```markdown
