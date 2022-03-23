@@ -71,21 +71,21 @@ Restricted keyword list for column `component` in alphabetic order (shared with 
 Example `channels.tsv`:
 
 ```Text
-name		 tracked_point	tracking_system	type	  component	units
-t1_acc_x	 LeftFoot	     IMU1acc		    ACC	    x		  m/s^2
-t1_acc_y	 LeftFoot	     IMU1acc		    ACC	    y		  m/s^2
-t1_acc_z	 LeftFoot	     IMU1acc		    ACC	    z		  m/s^2
-t1_gyro_x	LeftFoot	     IMU1gyro	       ANGVEL	 x		  rad/s
-t1_gyro_y	LeftFoot	     IMU1gyro	       ANGVEL	 y		  rad/s
-t1_gyro_z	LeftFoot	     IMU1gyro	       ANGVEL	 z		  rad/s
+name		    tracked_point	  tracking_system	 type	    component	  units
+t1_acc_x	  LeftFoot	      IMU1acc		       ACC	    x		         m/s^2
+t1_acc_y	  LeftFoot	      IMU1acc		       ACC	    y		         m/s^2
+t1_acc_z	  LeftFoot	      IMU1acc		       ACC	    z		         m/s^2
+t1_gyro_x	  LeftFoot	      IMU1gyro	       ANGVEL	  x		         rad/s
+t1_gyro_y	  LeftFoot	      IMU1gyro	       ANGVEL	  y		         rad/s
+t1_gyro_z	  LeftFoot	      IMU1gyro	       ANGVEL	  z		         rad/s
 …
-t2_acc_x	 RightWrist 	  IMU2		       ACC	    x		  m/s^2
-t2_acc_y	 RightWrist	   IMU2		       ACC	    y		  m/s^2
-t2_acc_z	 RightWrist	   IMU2		       ACC	    z          m/s^2
-t2_gyro_x    RightWrist	   IMU2		       ANGVEL	 x	      rad/s
+t2_acc_x	  RightWrist 	    IMU2		         ACC	    x		         m/s^2
+t2_acc_y	  RightWrist	    IMU2		         ACC	    y		         m/s^2
+t2_acc_z	  RightWrist	    IMU2		         ACC	    z            m/s^2
+t2_gyro_x   RightWrist	    IMU2		         ANGVEL	  x	           rad/s
 …
-m1_pos_x	 LeftThigh	    OPTpos		     POS	    x		  m
-m1_pos_y	 LeftThigh	    OPTpos		     POS	    y		  m
-m1_pos_z	 LeftThigh	    OPTpos		     POS	    z		  m
+m1_pos_x	  LeftThigh	     OPTpos		         POS	    x		        m
+m1_pos_y	  LeftThigh	     OPTpos		         POS	    y		        m
+m1_pos_z	  LeftThigh	     OPTpos		         POS	    z		        m
 
 ```

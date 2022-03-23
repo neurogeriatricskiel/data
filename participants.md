@@ -64,11 +64,11 @@ The purpose of this RECOMMENDED file is to describe properties of participants w
 
 ```Text
 participant_id  session_id  age weight  MDS-UPDRS-III
-sub-01          BL          35          65
-sub-01          FU1         41          42
-sub-02          BL          55          78
+sub-01          BL          35  72      65
+sub-01          FU1         41  75      42
+sub-02          BL          55  64      78
 ```
-For the same resoasns as mentioned above, it is RECOMMENDED to have a accompanied `participants_overview.json` file.
+For the same reasons as mentioned above, it is RECOMMENDED to have a accompanied `participants_overview.json` file.
 
 `participants_overview.json` example:
 ```Text
