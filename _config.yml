@@ -6,4 +6,7 @@ relative_links:
 include:
   - channels.md
   - README.md
+  - dataset_description.md
+  - motion.md
+  - participants.md
 theme: jekyll-theme-minimal

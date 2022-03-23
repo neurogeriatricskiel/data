@@ -1,8 +1,23 @@
 ---
 layout: default
-title: channels.tsv file
-rank: 2
+title: motion\
+rank: 4
 ---
+## Motion specific data (`motion\`)
+Within each motion specific folder, the data files are organized as follows:
+```markdown
+.
+├── sourcedata/
+├── rawdata/
+    ├── sub-<label>
+        ├── motion/
+            ├── sub-<label>_task-<label>_tracksys-<label>_channels.tsv
+            ├── sub-<label>_task-<label>_tracksys-<label>_motion.tsv
+            └── ...
+        ├── ...
+        └── sub-<label>_scans.tsv
+```
+The data are stored in text-based format, and are `TAB` delimited. In this way, data can be read into MATLAB, Python, or even Excel. However, if the files become too large, the user can change the file format *e.g.* .npy, but keeping the same tabular structure.
 
 ## Channels description (`*_channels.tsv`)
 
@@ -11,7 +26,7 @@ rank: 2
 └─ motion\
 └─ sub-<label>\[\_ses-<label>][\_task-<label>\]_channels.tsv
 
-This file is REQUIRED as it makes it easy to browse or query over larger collections of datasets. The REQUIRED columns are channel `name`, `type`, `tracked_point`, `tracking_system`, `component` and `unit`. Any number of additional columns may be added to provide additional information about the channels. The `*_channels.tsv` file should give additional information about individual recorded channel, some of which my not be found summarised in `TrackingSystems`.
+This file is REQUIRED as it makes it easy to browse or query over larger collections of datasets. The REQUIRED columns are channel `name`, `type`, `tracked_point`, `tracking_system`, `component` and `unit`. Any number of additional columns may be added to provide additional information about the channels.
 
 The columns of the channels description table stored in `*_channels.tsv` are:
 
@@ -73,4 +88,4 @@ m1_pos_x	 LeftThigh	    OPTpos		     POS	    x		  m
 m1_pos_y	 LeftThigh	    OPTpos		     POS	    y		  m
 m1_pos_z	 LeftThigh	    OPTpos		     POS	    z		  m
 
-```d questions asked to colleagues or SOLO employees concerning online research.
+```
