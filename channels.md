@@ -1,7 +1,7 @@
 ---
 layout: default
 title: channels.tsv file
-rank: 1
+rank: 2
 ---
 
 ## Channels description (`*_channels.tsv`)

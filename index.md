@@ -1,3 +1,9 @@
+---
+layout: default
+title: Home
+rank: 1
+---
+
 # Minimal data standards
 ## Motivation
 This page is intended as a blueprint for the data organization of all sensor-based projects of the [AG Neurogeriatrics](https://neurogeriatrics-kiel.com/de/). It should help to streamline analysis pipelines and keep projects organized for research partners.
