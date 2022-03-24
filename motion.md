@@ -20,11 +20,12 @@ Within each motion specific folder, the data files are organized as follows:
 The data are stored in text-based format, and are `TAB` delimited. In this way, data can be read into MATLAB, Python, or even Excel. However, if the files become too large, the user can change the file format *e.g.* .npy, but keeping the same tabular structure.
 
 ## Channels description (`*_channels.tsv`)
-
-└─ sub-<label>\
-└─ \[ses-<label>]\
-└─ motion\
-└─ sub-<label>\[\_ses-<label>][\_task-<label>\]_channels.tsv
+```
+└─ sub-<label>/
+   └─ [ses-<label>]/
+      └─ motion/
+         └─ sub-<label>[_ses-<label>][_task-<label>]_channels.tsv
+```
 
 This file is REQUIRED as it makes it easy to browse or query over larger collections of datasets. The REQUIRED columns are channel `name`, `type`, `tracked_point`, `tracking_system`, `component` and `unit`. Any number of additional columns may be added to provide additional information about the channels.
 
