@@ -94,4 +94,4 @@ Example:<br>
 NOTE: `sub` and `task` key have to be included in every filename.
 
 ## About
-This page is maintained by [Robbin Johannes Romijnders](mailto:r.romijnders@neurologie.uni-kiel.de) and [Julius Welzel](mailto:j.welzel@neurologie.uni-kiel.de) in collaboration with Clint Hansen, Johanna Geritz and Clint Hansen.
+This page is maintained by [Robbin Johannes Romijnders](mailto:r.romijnders@neurologie.uni-kiel.de) and [Julius Welzel](mailto:j.welzel@neurologie.uni-kiel.de) in collaboration with Clint Hansen, Johanna Geritz and Walter Maetzler.
