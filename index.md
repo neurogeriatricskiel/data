@@ -83,6 +83,15 @@ correspond to a unique identifier of that subject, such as `01`.
 The same holds for the `session` entity with its `ses-` key and its `<label>`
 value.
 
+If one subject completes multiple task within the same session, the key `task` must be introduced in the file name (for example `*task-StraightWalk*`). If one task is repeated multiple times, this can be indicated using the `run` key (for example `*task-StraightWalk_run-01*`). For each repetition per subject (sessions, tasks, runs) the user should give detailed information about these in a according `*.json` in the top level directory.
+
+The full template would read as follows (`[]` means optional): <br>
+`sub-<label>[_ses-<label>][_task-<label>][_run-<index>][_tracksys-<label>]_motion.*`
+
+Example:<br>
+`sub-COKI10043_ses-T1_task-DualTaskMM_run-02_tracksys-IMU1_motion.tsv`
+
+NOTE: `sub` and `task` key have to be included in every filename.
 
 ## About
-This page is maintained by [Robbin Johannes Romijnders](mailto:r.romijnders@neurologie.uni-kiel.de) and [Julius Welzel](mailto:j.welzel@neurologie.uni-kiel.de) in collaboration with Walter Maetzler and Clint Hansen.
+This page is maintained by [Robbin Johannes Romijnders](mailto:r.romijnders@neurologie.uni-kiel.de) and [Julius Welzel](mailto:j.welzel@neurologie.uni-kiel.de) in collaboration with Clint Hansen, Johanna Geritz and Clint Hansen.
